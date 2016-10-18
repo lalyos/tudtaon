@@ -1,13 +1,6 @@
 #!/bin/bash
 set -x
 
-if [ -e /usr/local/openresty/ ]; then
-    mkdir -p /usr/share/nginx/html/
-    ln -s /usr/local/openresty/nginx/html/index.html  /usr/share/nginx/html/index.html
-    ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx
-fi
-
-
 cat > /usr/share/nginx/html/index.html <<EOF
 <html>
 <body style="background-color: $COLOR">
